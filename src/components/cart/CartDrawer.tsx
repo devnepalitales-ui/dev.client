@@ -481,19 +481,19 @@ export function CartDrawer() {
                   </div>
                 )}
 
-                {/* 3. Must-Have Add-ons Shelf (Live from Server) */}
+                {/* 3. Extra Add-On Shelf (Live from Server) */}
                 {availableAddons.length > 0 && (
                   <div className="pt-2 border-t border-neutral-100 space-y-2.5">
                     <div className="flex items-center justify-between">
                       <div>
                         <h4 className="font-secondary font-bold text-xs sm:text-sm text-neutral-900 flex items-center gap-1.5">
-                          <span>Must-Have Sauces &amp; Dips</span>
+                          <span>Extra Add-On</span>
                           <span className="text-[9px] bg-red-50 text-[#D92121] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
                             Fresh
                           </span>
                         </h4>
                         <p className="text-[11px] text-neutral-500 font-secondary mt-0.5">
-                          Slow-simmered chilli oil &amp; authentic dips
+                          Chutneys &amp; chilli oil come included with momo — add extra portions here
                         </p>
                       </div>
                     </div>
