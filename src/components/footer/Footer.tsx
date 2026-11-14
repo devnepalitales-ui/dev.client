@@ -324,7 +324,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#menu-grid-top"
+                  href="/menu"
                   className="hover:text-brand-red transition-colors inline-block"
                 >
                   Menu
