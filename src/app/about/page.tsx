@@ -12,6 +12,17 @@ export const metadata: Metadata = {
     description:
       "What started in family kitchens in Jaigaon became a dream of bringing that same simple, soulful taste to every plate.",
     url: `${siteConfig.url}/about`,
+    siteName: siteConfig.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `About Us - ${siteConfig.name}`,
+      },
+    ],
   },
 };
 

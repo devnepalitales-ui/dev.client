@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `Menu - ${siteConfig.name}`,
+      },
+    ],
   },
   alternates: {
     canonical: `${siteConfig.url}/menu`,

@@ -25,6 +25,17 @@ export const metadata: Metadata = {
     description:
       "Locate Nepali Tales in Thane West, Maharashtra. Order handcrafted authentic momo, schedule Porter pickups, or reach customer care.",
     url: `${siteConfig.url}/contact`,
+    siteName: siteConfig.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `Contact Us - ${siteConfig.name}`,
+      },
+    ],
   },
 };
 
