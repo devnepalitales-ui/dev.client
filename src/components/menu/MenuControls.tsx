@@ -60,6 +60,16 @@ export function MenuControls({
         <span className="text-neutral-900 font-semibold">Menu</span>
       </nav>
 
+      {/* ─── Page Title (H1 for SEO) ─────────────────────────────── */}
+      <div className="space-y-1">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-neutral-950 font-secondary">
+          Authentic Nepali Momo Menu
+        </h1>
+        <p className="text-xs sm:text-sm text-neutral-600 font-secondary">
+          Handcrafted dumplings, crispy shaphaley, and traditional herbal jhol prepared fresh daily in Thane.
+        </p>
+      </div>
+
       {/* ─── Search Bar & Diet Mode Toggles ─────────────────────── */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-6">
         {/* Search Input Box */}
