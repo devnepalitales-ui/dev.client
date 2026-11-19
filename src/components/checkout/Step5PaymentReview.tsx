@@ -74,15 +74,26 @@ export function Step5PaymentReview() {
           addonId: a.addon.id,
           quantity: a.quantity,
         })),
-        address: orderType === "delivery" ? address : undefined,
+        address:
+          orderType === "delivery" && address
+            ? {
+                ...address,
+                pincode: address.pincode ? address.pincode.replace(/\D/g, "") : undefined,
+              }
+            : undefined,
       };
 
       // 3. Create order on server
       const serverResult = await createClientOrder(orderPayload);
 
       if (!serverResult.success || !serverResult.order) {
+        const errorDetail = serverResult.errors
+          ? Object.values(serverResult.errors).filter(Boolean).join(". ")
+          : "";
         setPaymentError(
-          serverResult.message || "Failed to create order. Please check slot availability and try again."
+          errorDetail
+            ? `${serverResult.message || "Invalid order details"}: ${errorDetail}`
+            : (serverResult.message || "Failed to create order. Please check slot availability and try again.")
         );
         setIsProcessing(false);
         return;

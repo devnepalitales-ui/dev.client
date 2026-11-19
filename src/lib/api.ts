@@ -1372,6 +1372,7 @@ export interface CreateOrderPayload {
 export interface OrderPlacedResult {
   success: boolean;
   message?: string;
+  errors?: Record<string, string>;
   order?: {
     id: string;
     orderNumber?: string;
