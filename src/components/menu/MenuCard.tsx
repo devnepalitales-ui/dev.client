@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { getOptimizedImageUrl } from "@/lib/image";
 import { Plus, Minus } from "lucide-react";
 import type { Product } from "@/lib/api";
 import { useCart } from "@/context/CartContext";
@@ -76,7 +77,7 @@ export function MenuCard({
       {/* ─── Image Container with Overlays (Flush to Edges) ───── */}
       <div className="relative w-full aspect-[4/3] bg-neutral-100 select-none overflow-hidden">
         <Image
-          src={product.image}
+          src={getOptimizedImageUrl(product.image, 600)}
           alt={displayName}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { getOptimizedImageUrl } from "@/lib/image";
 import Link from "next/link";
 import {
   X,
@@ -320,7 +321,7 @@ export function CartDrawer() {
                           {/* Thumbnail */}
                           <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-neutral-100 shrink-0 border border-neutral-200/80 shadow-2xs">
                             <Image
-                              src={product.image}
+                              src={getOptimizedImageUrl(product.image, 160)}
                               alt={product.name}
                               fill
                               sizes="80px"
@@ -421,7 +422,7 @@ export function CartDrawer() {
                         >
                           <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white shrink-0 border border-neutral-200/80 shadow-2xs">
                             <Image
-                              src={addon.image}
+                              src={getOptimizedImageUrl(addon.image, 100)}
                               alt={addon.name}
                               fill
                               sizes="48px"
@@ -514,7 +515,7 @@ export function CartDrawer() {
                             {/* Thumbnail */}
                             <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-white mb-1.5 border border-neutral-200/70 shadow-2xs">
                               <Image
-                                src={addon.image}
+                                src={getOptimizedImageUrl(addon.image, 160)}
                                 alt={addon.name}
                                 fill
                                 sizes="100px"
